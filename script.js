@@ -12,14 +12,6 @@ var card = document.querySelector(".profile-img");
 card.addEventListener("click", function(e){
     card.classList.toggle("is-flipped");
 });
-var circles1 = document.querySelector(".circle-project2");
-circles1.addEventListener("click", function(e){
-    circles1.classList.toggle("is-flipped2");
-});
-var circles1 = document.querySelector(".circle-project1");
-circles1.addEventListener("click", function(e){
-    circles1.classList.toggle("is-flipped2");
-});
 
 
 
@@ -144,19 +136,22 @@ function checkPrime(prime){
     }
     return "Your age is a prime number!";
 }
+var ip_sum = document.getElementById("ip-result");
+var display_ip = document.getElementById("display-id");
+var hostname = window.location.hostname;
+var ipParts = hostname.split(".");
+display_ip.innerHTML = hostname;
+var evenSum = 0;
+var digit;
+while (ipParts) {
+    digit = ipParts % 10; 
+    if (digit % 2 === 0) evenSum += digit;
+    ipParts = Math.floor(ipParts / 10);
+}
+ip_sum.innerHTML = "Result of sum of even numbers in IP address: " + evenSum;
 
-var ip_user;
-var display_ip = document.getElementById("ip-address");
-fetch('https://api.ipify.org?format=json')
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(data) {
-    display_ip.innerHTML = data.ip;
-  });
 
-  function sumIPAddress(){
-    
-  }
+
+
 
   

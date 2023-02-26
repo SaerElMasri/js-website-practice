@@ -396,20 +396,6 @@ input{
     border-radius: 100%;
     position: relative;
 }
-.is-flipped2{
-    background-color: black;
-    margin: 30%;
-    width: 20%;
-    height: 40vh;
-    border-radius: 100%;
-    position: absolute;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    transition: 1s;
-    transform-style: preserve-3d;
-    transform: rotateY(360deg);
-    cursor: pointer;
-}
 
 .mini-div2{
     width: 50%;
