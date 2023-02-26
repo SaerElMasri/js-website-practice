@@ -87,9 +87,25 @@ function mergeSort(arrayList){
     if(arrayList.length <= 1){
         return arrayList;
     }
-    let left = mergeSort(arrayList.slice(0, half_arr));
-    let right = mergeSort(arrayList.slice(half_arr));
+    var left = mergeSort(arrayList.slice(0, half_arr));
+    var right = mergeSort(arrayList.slice(half_arr));
     return helperMerge(left, right);
 };
 
+var username = document.getElementById("user_name");
+var palindrome_string = document.getElementById("palindrome-result");
+document.getElementById("check_palindrome").onclick = function(){
+    var name = username.value;
+    palindrome_string.innerHTML = checkPalindrome(name);
+}
+
+function checkPalindrome(string){
+    var len = string.length;
+    for(var i = 0; i < len / 2; i++){
+        if(string[i] !== string[len - 1 - i]){
+            return "Your name is not a palindrome string!"
+        }
+    }
+    return "Your name is a palindrome string!";
+}
 
