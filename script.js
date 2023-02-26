@@ -150,6 +150,21 @@ while (ipParts) {
 }
 ip_sum.innerHTML = "Result of sum of even numbers in IP address: " + evenSum;
 
+function reverseNumbers(str) {
+    if (!/\d/.test(str)) {
+        return "This string does not have numbers";
+      }
+      return str.replace(/\d+/g, (match) => match.split("").reverse().join(""));
+}
+
+var string_reverse = document.getElementById("reverse_string");
+var input_string = document.getElementById("reverse-input");
+document.getElementById("reverse-btn").onclick = function(){
+    var reversed = reverseNumbers(input_string.value);
+    string_reverse.innerHTML = reversed;
+
+}
+
 
 
 
