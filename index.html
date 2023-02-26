@@ -20,6 +20,11 @@
     </header>
     <div class="welcome-div">
         <div class="text-div">
+            <div class="img-layers">
+                <img src="assests/img1.jpg" alt="">
+                <img src="assests/img2.jpg" alt="">
+                <img src="assests/img3.jpg" alt="">
+            </div>
             <div class="text">
                 <h1>JavaScript Practice</h1>
             </div>
@@ -44,6 +49,7 @@
             </div>
         </div>
         <div class="profile-img">
+            <img src="" alt="">
         </div>
     </div>
     <div class="form-section">
@@ -57,14 +63,14 @@
                     </div>
                 </div>
                 <div class="inputs-forms">
-                    <input type="text" id="firstName" placeholder="First Name">
-                    <input type="text" id="secondName" placeholder="Second Name">
+                    <input type="text" id="first_name" placeholder="First Name">
+                    <input type="text" id="second_name" placeholder="Last Name">
                     <input type="email" id="email_user" placeholder="Email Address">
                     <input type="password" id="password_user" placeholder="Password">
                     <input type="password" id="password_check" placeholder="Password">
                 </div>
                 <div class="input-btn">
-                    <button>REGISTER</button>
+                    <button id="submit_btn" type="button">REGISTER</button>
                 </div>
             </div>
             <div class="form-img"></div>
@@ -77,10 +83,12 @@
                 Merge sort works on the principle of divide and conquer. Merge sort repeatedly breaks down an array 
                 into two equal sub-arrays until each sub-array consists of a single element. Finally, all those sub-arrays 
                 are merged such that the resultant array is sorted.
+                <br>
+                <span style="color: red;">Enter 10 numbers one by one, please?</span>
             </p>
-            <input type="number" name="" id="" placeholder="Enter a number">
-            <button>Enter Number</button>
-            <h1>Your list sorted</h1>
+            <input type="number" name="" id="merge-input" placeholder="Enter a number">
+            <button type="button" id="merge-action">Enter Number</button>
+            <h1 id="merge-result"></h1>
         </div>
 
     </div>
