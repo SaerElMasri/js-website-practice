@@ -108,4 +108,19 @@ function checkPalindrome(string){
     }
     return "Your name is not a palindrome!";
 }
-
+var users_age = document.getElementById("prime_input");
+var age_result = document.getElementById("prime_result");
+document.getElementById("check_prime").onclick = function(){
+    age_result.innerHTML = checkPrime(users_age.value);
+}
+function checkPrime(prime){
+    if(prime <= 1){
+        return "What? You are a newborn?";
+    }
+    for(var i = 2; i < prime; i++){
+        if(prime % 2 == 0){
+            return "Your age is not a prime number!"
+        }
+    }
+    return "Your age is a prime number!";
+}
