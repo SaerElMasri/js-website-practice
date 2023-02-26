@@ -11,7 +11,27 @@ parallax.addEventListener("mousemove", e => {
 var card = document.querySelector(".profile-img");
 card.addEventListener("click", function(e){
     card.classList.toggle("is-flipped");
-})
+});
+var circles1 = document.querySelector(".circle-project2");
+circles1.addEventListener("click", function(e){
+    circles1.classList.toggle("is-flipped2");
+});
+var circles1 = document.querySelector(".circle-project1");
+circles1.addEventListener("click", function(e){
+    circles1.classList.toggle("is-flipped2");
+});
+
+
+
+var line1 = document.querySelector(".line1");
+var line2 = document.querySelector(".line2");
+window.onscroll = () => {
+    var position = window.scrollY - 200;
+    line1.style.right = `${position}px`;
+    line2.style.right = `${position}px`;
+}
+
+
 
 var fName = document.getElementById("first_name");
 var sName = document.getElementById("second_name");
@@ -124,3 +144,19 @@ function checkPrime(prime){
     }
     return "Your age is a prime number!";
 }
+
+var ip_user;
+var display_ip = document.getElementById("ip-address");
+fetch('https://api.ipify.org?format=json')
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(data) {
+    display_ip.innerHTML = data.ip;
+  });
+
+  function sumIPAddress(){
+    
+  }
+
+  
