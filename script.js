@@ -100,12 +100,12 @@ document.getElementById("check_palindrome").onclick = function(){
 }
 
 function checkPalindrome(string){
-    var len = string.length;
-    for(var i = 0; i < len / 2; i++){
-        if(string[i] !== string[len - 1 - i]){
-            return "Your name is not a palindrome string!"
-        }
+    if(string.length === 1){
+        return "Your name is palindrome!";
     }
-    return "Your name is a palindrome string!";
+    if(string[0] === string.slice(-1)){
+        return checkPalindrome(string.slice(1,-1))
+    }
+    return "Your name is not a palindrome!";
 }
 
