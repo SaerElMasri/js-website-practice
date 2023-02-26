@@ -186,6 +186,14 @@ header {
     display: flex;
     position: absolute;
 }
+.form-div2{
+    border: 3px solid black;
+    border-radius: 5px;
+    width: 80%;
+    height: 90vh;
+    display: flex;
+    position: absolute;
+}
 .line2, .line4{
     position: absolute;
     width: 30%;
@@ -208,7 +216,9 @@ header {
 .form-img{
     width: 50%;
     height: 90vh;
-    background-color: black;
+    background-image: url(assests/join-bg.jpg);
+    background-position: center;
+    background-size: contain;
 }
 .form-inputs{
     width: 50%;

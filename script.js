@@ -174,6 +174,48 @@ document.getElementById("go-up").addEventListener("click", function(){
     document.documentElement.scrollTop = 0;
 });
 
-
+var course_id = document.getElementById("course_id");
+var course_name = document.getElementById("course_name");
+var instructor_name = document.getElementById("instructor_name");
+var number_std = document.getElementById("number_std");
+class Course {
+    constructor(courseId, courseName, instructor, numStudents) {
+        this.courseId = courseId;
+        this.courseName = courseName;
+        this.instructor = instructor;
+        this.numStudents = numStudents;
+    }
+    getCourseId() {
+    return this.courseId;
+    }
+    getCourseName() {
+    return this.courseName;
+    }
+    getInstructor() {
+    return this.instructor;
+    }
+    getNumStudents() {
+    return this.numStudents;
+    }
+    setCourseId(courseId) {
+    this.courseId = courseId;
+    }
+    setCourseName(courseName) {
+    this.courseName = courseName;
+    }
+    setInstructor(instructor) {
+    this.instructor = instructor;
+    }
+    setNumStudents(numStudents) {
+    this.numStudents = numStudents;
+    }
+}
+document.getElementById("course_btn").onclick = function(){
+    var myCourse = new Course();
+    myCourse.setCourseId = course_id.value;
+    myCourse.setCourseName = course_name.value;
+    myCourse.setInstructor = instructor_name.value;
+    myCourse.setNumStudents = number_std.value;
+}
 
   
