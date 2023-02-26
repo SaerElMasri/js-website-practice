@@ -17,10 +17,15 @@ card.addEventListener("click", function(e){
 
 var line1 = document.querySelector(".line1");
 var line2 = document.querySelector(".line2");
+var line3 = document.querySelector(".line3");
+var line4 = document.querySelector(".line4");
 window.onscroll = () => {
-    var position = window.scrollY - 200;
-    line1.style.right = `${position}px`;
-    line2.style.right = `${position}px`;
+    var position1 = window.scrollY - 200;
+    var position2 = window.scrollY - 2000;
+    line1.style.right = `${position1}px`;
+    line2.style.right = `${position1}px`;
+    line3.style.right = `${position2}px`;
+    line4.style.right = `${position2}px`;
 }
 
 
@@ -165,7 +170,9 @@ document.getElementById("reverse-btn").onclick = function(){
 
 }
 
-
+document.getElementById("go-up").addEventListener("click", function(){
+    document.documentElement.scrollTop = 0;
+});
 
 
 
